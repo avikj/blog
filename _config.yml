@@ -9,7 +9,7 @@ name: Avik Jain
 description: I'm a developer who loves problem solving, full-stack development, and sharing my passion for programming.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars0.githubusercontent.com/u/10556549?v=3&s=466
+avatar: https://en.gravatar.com/userimage/101762653/940bd0361db817f7779133e37795b1d4.png?size=400
 
 #
 # Flags below are optional
@@ -25,8 +25,8 @@ footer-links:
   instagram:
   linkedin:
   pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  rss: hello # just type anything here for a working RSS icon
+  twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
