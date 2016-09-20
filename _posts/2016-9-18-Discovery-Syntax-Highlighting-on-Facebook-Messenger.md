@@ -23,18 +23,23 @@ The areas which I expected to be displayed as code on Github were somehow being 
 ## So how do you do it?
 
 If you've used markdown and written README's for code projects before, the syntax will be familiar:
+
 ````
 ```
 Whatever text is placed between sets 
 of 3 backticks is displayed as code
 ```
 ````
+
 And if you want to add syntax highlighting, just specify the language after the first set of backticks:
+
 ````
 ```javascript
 // This will be highlighted as Javascript code
 ```
 ````
+
+When you hit enter, the message will appear in a yellow bubble with a monospaced font and syntax highlighting.
 
 I don't know why the engineers at Facebook decided to implement this feature in a product targeted at non-developers, or why it isn't mentioned anywhere on the internet. I'm just glad that I discovered it, because it's made talking about code and sending code snippets over Messenger a much better experience.
 
