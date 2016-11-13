@@ -23,9 +23,11 @@ Questions about casting generally come in 2 forms: determining which statements 
 This means the same thing as "which of the following would not compile?".
 
 The options given will usually look something like this:
+
 ```java
 SomeClass someReference = (SomeOtherClass) someOtherReference;
 ```
+
 When determining if something like this compiles, there are two questions you need to ask yourself.
 1. Is the casting legal?
 2. Is the assignment legal?
@@ -34,6 +36,7 @@ We will look at each of these.
 ### Is the casting legal?
 
 At compile-time, references can be casted up or down. That means that the class in parentheses can be a superclass or a subclass of (or the same as) the type of the reference.
+
 ```java
 Person p1 = new Person("Hugh Mungus", 42);
 Student s1 = new Student("Avik Jain", 15);
@@ -43,6 +46,7 @@ Student s1 = new Student("Avik Jain", 15);
 // the following would give an error at compile-time
 ... = (String) p1 // String is not a subclass or superclass of Person, so this fails
 ```
+
 If you determine that the cast is legal, then the reference of the expression is successfully changed. For example, the compiler will think `((Student) p1)` is a `Student`, since casting changes its reference type.
 
 *Note: while these rules apply at compile-time some of these statements may still cause run-time errors. Keep reading.*
@@ -50,10 +54,13 @@ If you determine that the cast is legal, then the reference of the expression is
 ### Is the assignment legal?
 
 Assignment is essentially making a reference point at an object. The syntax is 
+
 ```java
 myRef = otherRef; // this makes myRef point to the object which otherRef points to
 ```
+
 Assignment is legal at compile time if the reference type to the right of the equal sign is a subclass or the same as the reference type on the left. For example, 
+
 ```java
 Person p2 = new Student(...); // works since the reference type on the right is Student, which is a subclass of the reference type on the left (Person).
 Person p3 = new Person(...); // works since the reference type on the right is Person, which is the same as the reference type on the left.
@@ -67,12 +74,13 @@ Person p4 = "HARAMBE"; // does NOT work, since String is not a subclass of Perso
 To determine if a statement compiles, check if the casting is legal, and then check if the assignment is legal.
 Remember that casting changes the reference type of the right side of an expression.
 
-```
+```java
 Student s1 = new Student(...);
 Person p1 = new Person(...);
 
 // Which of the following compile successfully? 
 ```
+
 a. `Student newStud = (Person) s1;`
 
 b. `Person newPer = (Person) s1;`
@@ -130,15 +138,18 @@ There's only really one case in which such a statement would compile but produce
 ### The ClassCastException
 This error occurs when casting is legal at compile-time, but turns out to be impossible at run-time.
 Ex:
+
 ```java
 Object obj = new Object;
 String str = (String) obj; // compiles since Object is a superclass of String
 ```
+
 While this code compiles, at run-time the computer determines that the cast is not possible. But you're not a computer. Here's how you can determine whether casting causes an error.
 
 *Casting causes an error when the **object** being casted is not an instance of the type which it is being casted to.*
 
 This is where the difference between the value type and the reference type is important. Let's look at another example.
+
 ```java
 Person p = new Student(...);
 Student s = (Student) p; // THIS RUNS!
@@ -155,6 +166,7 @@ The second compiles, but produces a `ClassCastException` when it runs. The value
 Student s1 = new Student(...);
 Person p1 = new Person(...);
 ```
+
 For each of the following, determine if the statement compiles and runs, compiles but doesn't run, or doesn't compile.
 
 a. `Student newStud = (Person) s1;`
