@@ -4,7 +4,7 @@ title: APCS Guide&#58; Casting and Inheritance Legality
 categories: discovery
 ---
 
-If you're taking APCS (especially at Monta Vista), it's likely that you have seen questions asking about the legality of different casting expressions. In my experience, understanding how to do these questions is one of the things APCS students struggle with most. I've spent multiple hours explaining how to determine which expresions are legal, so I figured I might as well write it all down (stuff on interfaces coming soon).
+If you're taking APCS (especially at Monta Vista), it's likely that you have seen questions asking about the legality of different casting expressions. In my experience, understanding how to do these questions is one of the things APCS students struggle with most. I've spent multiple hours explaining how to determine which expressions are legal, so I figured I might as well write it all down (stuff on interfaces coming soon).
 
 First, let's review some Java basics. A class defines a blueprint for an object, which can represent a real world item. In Java, when an object is assigned to a variable, that variable is a *reference* to the object. I usually visualize a reference as a label with an arrow pointing to a circle which represents an object. For example, the following line would create an object (circle) holding data about me, and the reference "me" points to that circle. Also note that the `=` (equals) sign denotes assigning a reference.
 
